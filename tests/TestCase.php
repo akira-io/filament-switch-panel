@@ -2,6 +2,7 @@
 
 namespace Akira\FilamentSwitchPanel\Tests;
 
+use Akira\FilamentSwitchPanel\FilamentSwitchPanelServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
@@ -18,7 +19,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use Akira\FilamentSwitchPanel\FilamentSwitchPanelServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -43,8 +43,8 @@ class TestCase extends Orchestra
             InfolistsServiceProvider::class,
             LivewireServiceProvider::class,
             NotificationsServiceProvider::class,
-            SpatieLaravelSettingsPluginServiceProvider::class,
-            SpatieLaravelTranslatablePluginServiceProvider::class,
+            //            SpatieLaravelSettingsPluginServiceProvider::class,
+            //            SpatieLaravelTranslatablePluginServiceProvider::class,
             SupportServiceProvider::class,
             TablesServiceProvider::class,
             WidgetsServiceProvider::class,

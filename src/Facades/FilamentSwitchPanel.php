@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Facade;
  */
 class FilamentSwitchPanel extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return \Akira\FilamentSwitchPanel\FilamentSwitchPanel::class;
     }

@@ -4,6 +4,11 @@
     'panels',
     'getHref'
 ])
+@php
+  $accessiblePanels = collect($panels)->filter(function ($panel) use ($currentPanel) {
+		 return auth()->user()->canAccessPanel($panel)  && $currentPanel->getId() != $panel->getId();
+ });
+@endphp
 <x-filament::dropdown teleport placement="bottom-end" {{ $attributes }}>
    <x-slot name="trigger">
       <button type="button"
@@ -21,6 +26,7 @@
          />
       </button>
    </x-slot>
+  @if( count($accessiblePanels) > 1 )
    <x-filament::dropdown.list>
       @foreach ($panels as $panel)
          <x-filament::dropdown.list.item
@@ -32,4 +38,5 @@
          </x-filament::dropdown.list.item>
       @endforeach
    </x-filament::dropdown.list>
+  @endif
 </x-filament::dropdown>

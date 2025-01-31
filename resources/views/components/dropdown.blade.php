@@ -28,7 +28,7 @@
    </x-slot>
   @if( count($accessiblePanels) > 1 )
    <x-filament::dropdown.list>
-      @foreach ($panels as $panel)
+      @foreach ($accessiblePanels as $panel)
          <x-filament::dropdown.list.item
          :href="$getHref($panel)"
          :badge="str($labels[$panel->getId()] ?? $panel->getId())->substr(0, 2)->upper()"

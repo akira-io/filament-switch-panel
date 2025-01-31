@@ -1,5 +1,13 @@
 
 
+## [1.2.0](https://github.com/akira-io/filament-switch-panel/compare/v1.1.0...v1.2.0) (2025-01-31)
+
+
+### Features
+
+* add access control for dropdown panels ([37f1eb9](https://github.com/akira-io/filament-switch-panel/commit/37f1eb94e3b91a5708d0bc3efb953f52e2b18dbb))
+* add access control for dropdown panels ([dae80ea](https://github.com/akira-io/filament-switch-panel/commit/dae80ea4529a70386494ec39b2b2b95873da00b6))
+
 ## [1.1.0](https://github.com/akira-io/filament-switch-panel/compare/v1.0.0...v1.1.0) (2024-09-16)
 
 

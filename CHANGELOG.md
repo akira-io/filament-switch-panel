@@ -1,5 +1,12 @@
 
 
+## [1.3.0](https://github.com/akira-io/filament-switch-panel/compare/v1.2.0...v1.3.0) (2025-02-01)
+
+
+### Features
+
+* enhance dropdown panel accessibility and update test workflow ([75ebb5e](https://github.com/akira-io/filament-switch-panel/commit/75ebb5e40f4ac9077e26e066a49717d4da6ac522))
+
 ## [1.2.0](https://github.com/akira-io/filament-switch-panel/compare/v1.1.0...v1.2.0) (2025-01-31)
 
 

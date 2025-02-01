@@ -22,31 +22,33 @@ $getPanelPath = function (\Filament\Panel $panel) use ($getFirstDomainPath, $get
            : null;
 @endphp
 
-@if ($isSimple)
-   <x-filament-switch-panel::dropdown
-   :labels="$labels"
-   :panels="$panels"
-   :currentPanel="$currentPanel"
-   :getHref="$computeHref"
-   />
+@if(count($panels)>0)
+  @if ($isSimple)
+     <x-filament-switch-panel::dropdown
+     :labels="$labels"
+     :panels="$panels"
+     :currentPanel="$currentPanel"
+     :getHref="$computeHref"
+     />
 
-@else
-   <style>
-       .panel-switch-modal .fi-modal-content {
-           align-items: center !important;
-           justify-content: center !important;
-       }
-   </style>
-   <x-filament-switch-panel::icon-button />
-   <x-filament-switch-panel::modal
-   :modalWidth="$modalWidth"
-   :isSlideOver="$isSlideOver"
-   :heading="$heading"
-   :panels="$panels"
-   :computeHref="$computeHref"
-   :currentPanel="$currentPanel"
-   :renderIconAsImage="$renderIconAsImage"
-   :iconSize="$iconSize"
-   :icons="$icons"
-   :labels="$labels" />
+  @else
+     <style>
+         .panel-switch-modal .fi-modal-content {
+             align-items: center !important;
+             justify-content: center !important;
+         }
+     </style>
+     <x-filament-switch-panel::icon-button />
+     <x-filament-switch-panel::modal
+     :modalWidth="$modalWidth"
+     :isSlideOver="$isSlideOver"
+     :heading="$heading"
+     :panels="$panels"
+     :computeHref="$computeHref"
+     :currentPanel="$currentPanel"
+     :renderIconAsImage="$renderIconAsImage"
+     :iconSize="$iconSize"
+     :icons="$icons"
+     :labels="$labels" />
+  @endif
 @endif

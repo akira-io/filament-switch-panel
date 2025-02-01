@@ -245,7 +245,7 @@ class FilamentSwitchPanel extends Component
     {
         return collect(filament()->getPanels())
             ->reject(fn (Panel $panel) => in_array($panel->getId(), $this->getExcludes())
-                || ! auth()->user()->canAccessPanel($panel) //@phpstan-ignore-line
+                || ! auth()->user()->canAccessPanel($panel) // @phpstan-ignore-line
                 || $this->getCurrentPanel()->getId() === $panel->getId())
             ->toArray();
     }

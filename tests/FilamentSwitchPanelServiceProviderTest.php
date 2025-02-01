@@ -13,7 +13,7 @@ class FilamentSwitchPanelServiceProviderTest extends TestCase
      *
      * Here, we ensure that the required configurations are set on the package during its initialization.
      */
-    public function testConfigurePackage(): void
+    public function test_configure_package(): void
     {
         $packageMock = $this->getMockBuilder(Package::class)
             ->disableOriginalConstructor()

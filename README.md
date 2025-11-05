@@ -19,6 +19,10 @@ optionally, you can publish the views to customise the switch panel.
 php artisan vendor:publish --tag="filament-switch-panel-views"
 ```
 
+### Filament Compatibility
+
+This package supports both **Filament v3.x** and **Filament v4.x**. The package will automatically detect the installed version and work seamlessly with either version.
+
 ## Customisation
 
 to start your customisation, use the `configureUsing` method in your service provider's boot method.

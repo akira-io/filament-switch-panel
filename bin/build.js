@@ -1,6 +1,18 @@
 import esbuild from 'esbuild'
+import fs from 'fs'
+import path from 'path'
 
 const isDev = process.argv.includes('--dev')
+
+function getFilamentVersion() {
+    try {
+        const composerJson = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'vendor', 'filament', 'filament', 'composer.json'), 'utf8'))
+        const version = composerJson.version || '3.x'
+        return version.split('.')[0] === '4' ? '4.x' : '3.x'
+    } catch {
+        return '3.x'
+    }
+}
 
 async function compile(options) {
     const context = await esbuild.context(options)

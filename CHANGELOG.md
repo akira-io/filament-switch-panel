@@ -1,5 +1,7 @@
 
 
+## [1.3.1](https://github.com/akira-io/filament-switch-panel/compare/v1.3.0...v1.3.1) (2025-11-05)
+
 ## [1.3.0](https://github.com/akira-io/filament-switch-panel/compare/v1.2.0...v1.3.0) (2025-02-01)
 
 
